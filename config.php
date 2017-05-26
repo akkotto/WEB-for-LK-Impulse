@@ -1,10 +1,10 @@
 <?php
 	/* Подключение к базе данных */
 	$db = array(
-		"host" => "localhost", //Хост Mysql
-		"user" => "root", //Пользователь Mysql
-		"pass" => "MSADKlfmsjafjasfmakslfjkla", //Пароль от пользователя mysql
-		"name" => "test" //Название Базы Данных Mysql
+		"host" => "", //Хост Mysql
+		"user" => "", //Пользователь Mysql
+		"pass" => "", //Пароль от пользователя mysql
+		"name" => "" //Название Базы Данных Mysql
 	);
 	$db2 = mysql_connect($db['host'], $db['user'], $db['pass']);
 	mysql_select_db($db['name'], $db2);
