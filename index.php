@@ -26,4 +26,5 @@
 	</form>
 <div class="text">Нажимая кнопку оплатить, Вы соглашаетесь с <u>правилами</u> покупки</div>
 </div>
+<?php include('footer.php'); ?>
 </html>

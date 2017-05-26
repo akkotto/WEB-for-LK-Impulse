@@ -83,3 +83,14 @@ a{
     cursor: pointer;
     background: #33b56e;
 }
+
+.footer {
+    margin: 0 auto;
+    color: #4e4e4e;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #4e4e4e;
+}
