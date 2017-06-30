@@ -19,7 +19,7 @@ if(isset($_POST['SIGN'])){
 			//$sql2 = mysql_query("SELECT * FROM `lk` WHERE `auth` = '".$result['steamid']."'");
 			$summ = (int)$result['summ']; 
 			if(!empty($sql2)){
-				$mysqli->query("UPDATE `lk` SET `cash`=`cash` + ?i,`all_cash`=`all_cash` + ?i WHERE `auth` = ?s", $summ, $summ, $result['steamid'])
+				$mysqli->query("UPDATE `lk` SET `cash`=`cash` + ?i,`all_cash`=`all_cash` + ?i WHERE `auth` = ?s", $summ, $summ, $result['steamid']);
 				//$sql = mysql_query("UPDATE `lk` SET `cash`=`cash`+".$summ.",`all_cash`=`all_cash`+".$summ." WHERE `auth` = '".$result['steamid']."'");
 			}else{
 				$mysqli->query("INSERT INTO `lk`(`auth`, `name`, `cash`, `all_cash`) VALUES ('','USER',?i,?i)", $summ, $summ);
