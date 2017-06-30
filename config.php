@@ -1,4 +1,5 @@
 <?php
+	include("classes/safemysql.class.php");
 	/* Подключение к базе данных */
 	$db = array(
 		"host" => "", //Хост Mysql
@@ -6,11 +7,11 @@
 		"pass" => "", //Пароль от пользователя mysql
 		"name" => "" //Название Базы Данных Mysql
 	);
-	$mysqli = new mysqli($db['host'], $db['user'], $db['pass'], $db['name']);
-	if($mysqli->connect_errno){
+	$mysqli = new SafeMysql(array('host' => $db['host'],'user' => $db['user'], 'pass' => $db['pass'],'db' => $db['name']));
+	/*if($mysqli->connect_errno){
 		die("Ошибка подключения к базе!");
-	}
-	if(!$mysqli->query("SELECT * FROM `lk`")){
+	}*/
+	if(empty($mysqli->getRow("SELECT * FROM `lk`"))){
 		die("Ошибка! Таблица `lk` не найдена!");
 	}
 	/* Настройка авторизации черещз steam */
