@@ -1,4 +1,7 @@
 <?php
+	ini_set ( 'display_errors' , true );
+	ini_set ( 'html_errors' , true );
+	ini_set ( 'error_reporting' , E_ALL );
 	session_start();
 	include("config.php");
 	function toSteamID($id) {

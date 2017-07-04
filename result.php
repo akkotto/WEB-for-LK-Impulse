@@ -17,7 +17,7 @@ if(isset($_POST['SIGN'])){
 			if(!empty($sql2)){
 				$mysqli->query("UPDATE `lk` SET `cash`=`cash` + ?i,`all_cash`=`all_cash` + ?i WHERE `auth` = ?s", $result['summ'], $result['summ'], $result['steamid']);
 			}else{
-				$mysqli->query("INSERT INTO `lk`(`auth`, `name`, `cash`, `all_cash`) VALUES ('','USER',?i,?i)", $summ, $summ);
+				$mysqli->query("INSERT INTO `lk`(`auth`, `name`, `cash`, `all_cash`) VALUES (?s,'USER',?i,?i)", $result['steamid'], $result['summ'], $result['summ']);
 			}
 		}
 	}
