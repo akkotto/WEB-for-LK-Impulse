@@ -4,7 +4,7 @@ function getIP() {
 	if(isset($_SERVER['HTTP_X_REAL_IP'])) return $_SERVER['HTTP_X_REAL_IP'];
 	return $_SERVER['REMOTE_ADDR'];
 }
-if (!in_array(getIP(),array('136.243.38.147','136.243.38.149','136.243.38.150','136.243.38.151','136.243.38.189'))) {
+if (!in_array(getIP(),array('136.243.38.147','136.243.38.149','136.243.38.150','136.243.38.151','136.243.38.189','88.198.88.98'))) {
 	die("hacking attempt!");
 }else{
 if(isset($_POST['SIGN'])){
