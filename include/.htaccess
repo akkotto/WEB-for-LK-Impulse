@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+
+# protect config files
+RewriteCond %{REQUEST_URI} \.php$
+RewriteRule \.php$ - [R=404]
