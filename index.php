@@ -22,7 +22,6 @@
 	<div class="title">Пополнить баланс</div>
 	<div class="result" style="color: #cc0000; text-align: center; position:relative; top:30px;"></div>
 	<form action="javascript:void(null);" method="POST" id="formbuy" onsubmit="formbuy();">
-  		<input type="text" name="email" class="inputtext" placeholder="Email" style="margin-top: 70px">
 		<input type="text" name="steamid" required pattern="STEAM_[0-1]:[0-1]:[0-9]{5,15}" title="Введите steamid в формате: Пример: STEAM:0:1:53615624" class="inputtext" placeholder="Ваш steamid (Пример: STEAM:0:1:53615624)" <?php if(isset($_SESSION['steamid'])) echo 'value="'.toSteamID($_SESSION['steamid']).'"'; ?>>
 		<input type="text" name="summ" class="inputtext" placeholder="Сумма"><br>
 		<input type="submit" name="button" class="button" value="Оплатить">
